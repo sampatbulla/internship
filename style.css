@@ -1,5 +1,9 @@
 body {
-	background: #1690A7;
+	background-image: url(bg.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+  	background-attachment: fixed;
+  	background-position: center;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -17,7 +21,7 @@ form {
 	border: 2px solid #ccc;
 	padding: 30px;
 	background: #fff;
-	border-radius: 15px;
+	border-radius: 1px;
 }
 
 h2 {
@@ -84,3 +88,9 @@ h1 {
 .ca:hover {
 	text-decoration: underline;
 } 
+
+@media only screen and (max-width: 750px) {
+  form {
+  		width: 80%;
+  }
+}
