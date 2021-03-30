@@ -14,6 +14,14 @@
    
 </head>
 <body>
+  <?php
+    $uname=$_GET['uname'];
+    $url1="temp.php?uname=".$uname;
+    $url2="address1.php?uname=".$uname;
+    $url3="edu.php?uname=".$uname;
+    $url8="workex.php?uname=".$uname;
+
+    ?>
 
     <nav class="navbar navbar-light bgc">
   <div class="container">
@@ -37,72 +45,72 @@
 		<div class="row">
        
         <div class="col-lg-2 col-md-12 cls1">
-          <a href="https://en.wikipedia.org/wiki/Wikipedia">
-             <img style="height:220px" class="img-thumbnail img-fluid" src="img.png">
-          </a>
+          <?php
+             echo  "<a  href='$url1'><img src='img1.png'  /></a>";
+          ?>
         </div>
 
         
         <div class="col-lg-2 col-md-12 cls1">
-          <a href="https://en.wikipedia.org/wiki/Wikipedia">
-             <img style="height:220px" class="img-thumbnail img-fluid" src="img.png">
-          </a>
+          <?php
+             echo  "<a  href='$url2'><img src='img2.png'  /></a>";
+          ?>
         </div>
 
         
         <div class="col-lg-2 col-md-12 cls1">
-          <a href="https://en.wikipedia.org/wiki/Wikipedia">
-             <img style="height:220px" class="img-thumbnail img-fluid" src="img.png">
-          </a>
+           <?php
+             echo  "<a  href='$url3'><img src='img3.png'  /></a>";
+          ?>
         </div>
         
 
         <div class="col-lg-2 col-md-12 cls1">
-          <a href="https://en.wikipedia.org/wiki/Wikipedia">
-             <img style="height:220px" class="img-thumbnail img-fluid" src="img.png">
-          </a>
+          <?php
+             echo  "<a  href='$url1'><img src='img4.png'  /></a>";
+          ?>
         </div>
         
         <div class="col-lg-2 col-md-12 cls1">
-          <a href="https://en.wikipedia.org/wiki/Wikipedia">
-             <img style="height:220px" class="img-thumbnail img-fluid" src="img.png">
-          </a>
+          <?php
+             echo  "<a  href='$url1'><img src='img5.png'  /></a>";
+          ?>
         </div>
 	</div>
    <div class="mg">
 	  <div class="row">
        
         <div class="col-lg-2 col-md-12 cls1">
-          <a href="https://en.wikipedia.org/wiki/Wikipedia">
-             <img style="height:220px" class="img-thumbnail img-fluid" src="img.png">
-          </a>
+          <?php
+             echo  "<a  href='$url1'><img src='img6.png'  /></a>";
+          ?>
         </div>
 
         
         <div class="col-lg-2 col-md-12 cls1">
-          <a href="https://en.wikipedia.org/wiki/Wikipedia">
-             <img style="height:220px" class="img-thumbnail img-fluid" src="img.png">
-          </a>
+          <?php
+             echo  "<a  href='$url1'><img src='img7.png'  /></a>";
+          ?>
         </div>
 
         
         <div class="col-lg-2 col-md-12 cls1">
-          <a href="https://en.wikipedia.org/wiki/Wikipedia">
-             <img style="height:220px" class="img-thumbnail img-fluid" src="img.png">
-          </a>
+         <?php
+             echo  "<a  href='$url8'><img src='img8.png'  /></a>";
+          ?>
         </div>
         
 
         <div class="col-lg-2 col-md-12 cls1">
-          <a href="https://en.wikipedia.org/wiki/Wikipedia">
-             <img style="height:220px" class="img-thumbnail img-fluid" src="img.png">
-          </a>
+           <?php
+             echo  "<a  href='$url1'><img src='img1.png'  /></a>";
+          ?>
         </div>
         
         <div class="col-lg-2 col-md-12 cls1">
-          <a href="https://en.wikipedia.org/wiki/Wikipedia">
-             <img style="height:220px" class="img-thumbnail img-fluid" src="img.png">
-          </a>
+           <?php
+             echo  "<a  href='$url1'><img src='img10.png'  /></a>";
+          ?>
         </div>
   </div>
   </div>
