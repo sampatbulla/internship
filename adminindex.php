@@ -18,6 +18,7 @@
                 <br />  
                 <div class="table-responsive">  
                      <div align="right">  
+                          <button type="button" name="add" id="add" data-toggle="modal" data-target="#add_data_Modal" class="btn btn-warning">Add</button>  
                      </div>  
                      <br />  
                      <div id="employee_table">  
