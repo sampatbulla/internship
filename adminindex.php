@@ -6,7 +6,7 @@
  <!DOCTYPE html>  
  <html>  
       <head>  
-           <title>Webslesson Tutorial | PHP Ajax Update MySQL Data Through Bootstrap Modal</title>  
+           <title>Admin Input Form</title>  
            <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>  
            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />  
            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>  
@@ -14,7 +14,7 @@
       <body>  
            <br /><br />  
            <div class="container" style="width:700px;">  
-                <h3 align="center">PHP Ajax Update MySQL Data Through Bootstrap Modal</h3>  
+                <h3 align="center">Admin Input Form</h3>  
                 <br />  
                 <div class="table-responsive">  
                      <div align="right">  
@@ -66,7 +66,7 @@
            <div class="modal-content">  
                 <div class="modal-header">  
                      <button type="button" class="close" data-dismiss="modal">&times;</button>  
-                     <h4 class="modal-title">PHP Ajax Update MySQL Data Through Bootstrap Modal</h4>  
+                     <h4 class="modal-title">Admin Input Form</h4>  
                 </div>  
                 <div class="modal-body">  
                      <form method="post" id="insert_form">  
@@ -74,7 +74,13 @@
                           <input type="text" name="name" id="name" class="form-control" />  
                           <br />  
                           <label>Enter Employee Address</label>  
-                          <textarea name="address" id="address" class="form-control"></textarea>  
+                          <textarea name="native" id="native" class="form-control"></textarea>  
+                          <br />
+                          <label>Enter Employee Work Location</label>  
+                          <textarea name="wloc" id="wloc" class="form-control"></textarea>  
+                          <br />
+                          <label>Enter Nationality</label>  
+                          <input type="text" name="nationality" id="nationality" class="form-control" />  
                           <br />  
                           <label>Select Gender</label>  
                           <select name="gender" id="gender" class="form-control">  
@@ -83,11 +89,44 @@
                           </select>  
                           <br />  
                           <label>Enter Designation</label>  
-                          <input type="text" name="designation" id="designation" class="form-control" />  
-                          <br />  
-                          <label>Enter Age</label>  
-                          <input type="text" name="age" id="age" class="form-control" />  
-                          <br />  
+                          <input type="text" name="aw" id="aw" class="form-control" />  
+                          <br />
+                          <label>Enter Position</label>  
+                          <input type="text" name="pos" id="pos" class="form-control" />  
+                          <br /> 
+                          <label>Enter Date of Birth</label>  
+                          <input type="text" name="dob" id="dob" class="form-control" />  
+                          <br />
+                          <label>Enter Bank Account clgNo</label>  
+                          <input type="text" name="accno" id="accno" class="form-control" />  
+                          <br />
+                          <label>Enter Bank IFSC</label>  
+                          <input type="text" name="ifsc" id="ifsc" class="form-control" />  
+                          <br />
+                          <label>Enter Tenth Percentage/CGPA</label>  
+                          <input type="text" name="ten" id="ten" class="form-control" />  
+                          <br />
+                          <label>Enter 12th/PUC Percentage</label>  
+                          <input type="text" name="sec" id="sec" class="form-control" />  
+                          <br />
+                          <label>Enter UG Collage</label>  
+                          <input type="text" name="clg" id="clg" class="form-control" />  
+                          <br />
+                          <label>Enter Stream</label>  
+                          <input type="text" name="stream" id="stream" class="form-control" />  
+                          <br />
+                          <label>Enter CGPA</label>  
+                          <input type="text" name="cgpa" id="cgpa" class="form-control" />  
+                          <br/>
+                          <label>Enter Realationship Status</label>  
+                          <input type="text" name="material" id="material" class="form-control" />  
+                          <br />
+                          <label>Enter Work Exp</label>  
+                          <input type="text" name="doj" id="doj" class="form-control" />  
+                          <br /> 
+                          <label>Enter Experience</label>  
+                          <input type="text" name="exp" id="exp" class="form-control" />  
+                          <br /> 
                           <input type="hidden" name="employee_id" id="employee_id" />  
                           <input type="submit" name="insert" id="insert" value="Insert" class="btn btn-success" />  
                      </form>  
@@ -114,10 +153,24 @@
                 dataType:"json",  
                 success:function(data) {  
                      $('#name').val(data.name);  
-                     $('#address').val(data.address);  
+                     $('#native').val(data.native);
+                     $('#wloc').val(data.wloc);
+                     $('#nationality').val(data.nationality); 
+                     $('#aw').val(data.aw); 
                      $('#gender').val(data.gender);  
-                     $('#designation').val(data.designation);  
-                     $('#age').val(data.age);  
+                     $('#designation').val(data.designation);
+                     $('#pos').val(data.pos);  
+                     $('#dob').val(data.dob);
+                     $('#accno').val(data.accno);
+                     $('#ifsc').val(data.ifsc);  
+                     $('#ten').val(data.ten);
+                     $('#sec').val(data.sec);
+                     $('#clg').val(data.clg);
+                     $('#stream').val(data.stream);
+                     $('#cgpa').val(data.cgpa);
+                     $('#material').val(data.material);
+                     $('#exp').val(data.exp);5
+                     $('#doj').val(data.doj);
                      $('#employee_id').val(data.id);  
                      $('#insert').val("Update");  
                      $('#add_data_Modal').modal('show');  

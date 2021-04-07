@@ -1,5 +1,5 @@
 <?php  
- $connect = mysqli_connect("localhost", "root", "", "testing");  
+ $connect = mysqli_connect("localhost", "root", "", "test_db");  
  if(!empty($_POST))  
  {  
       $output = '';  
@@ -22,7 +22,7 @@
            $message = 'Data Updated';  
       }  
       else  
-      {  
+      {   
            $query = "  
            INSERT INTO tbl_employee(name, address, gender, designation, age)  
            VALUES('$name', '$address', '$gender', '$designation', '$age');  
