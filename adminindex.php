@@ -1,6 +1,6 @@
 <?php  
  $connect = mysqli_connect("localhost", "root", "", "test_db");  
- $query = "SELECT * FROM users as u,address as ad,bank as b,education as e,employee as emp,orga as o,workex as w WHERE u.user_name=ad.uname AND u.user_name=b.uname AND u.user_name=e.uname AND u.user_name=emp.first AND u.user_name=o.uname AND u.user_name=w.uname";  
+ $query = "SELECT u.id,name,last,native,wloc,accno,ifsc,ten,sec,stream,clg,cgpa,material,dob,nationality,gender,pos,aw,doj,exp FROM users as u,address as ad,bank as b,education as e,employee as emp,orga as o,workex as w WHERE u.user_name=ad.uname AND u.user_name=b.uname AND u.user_name=e.uname AND u.user_name=emp.first AND u.user_name=o.uname AND u.user_name=w.uname";  
  $result = mysqli_query($connect, $query);  
  ?>  
  <!DOCTYPE html>  
@@ -105,13 +105,14 @@
            $('#insert_form')[0].reset();  
       });  
       $(document).on('click', '.edit_data', function(){  
-           var employee_id = $(this).attr("id");  
+           var employee_id = $(this).attr("id");
+           alert(employee_id);  
            $.ajax({  
                 url:"fetch.php",  
                 method:"POST",  
                 data:{employee_id:employee_id},  
                 dataType:"json",  
-                success:function(data){  
+                success:function(data) {  
                      $('#name').val(data.name);  
                      $('#address').val(data.address);  
                      $('#gender').val(data.gender);  
