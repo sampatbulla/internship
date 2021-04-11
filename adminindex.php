@@ -70,9 +70,12 @@
                 </div>  
                 <div class="modal-body">  
                      <form method="post" id="insert_form">  
-                          <label>Enter Employee Name</label>  
-                          <input type="text" name="name" id="name" class="form-control" />  
+                          <label>Enter Employee First Name</label>  
+                          <input type="text" name="name" id="name" class="form-control" readonly />  
                           <br />  
+                          <label>Enter Employee Last Name</label>  
+                          <input type="text" name="last" id="last" class="form-control" readonly />  
+                          <br />
                           <label>Enter Employee Address</label>  
                           <textarea name="native" id="native" class="form-control"></textarea>  
                           <br />
@@ -152,7 +155,8 @@
                 data:{employee_id:employee_id},  
                 dataType:"json",  
                 success:function(data) {  
-                     $('#name').val(data.name);  
+                     $('#name').val(data.name);
+                     $('#last').val(data.last);                 
                      $('#native').val(data.native);
                      $('#wloc').val(data.wloc);
                      $('#nationality').val(data.nationality); 
