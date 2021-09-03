@@ -25,9 +25,10 @@
 
     <nav class="navbar navbar-light bgc">
   <div class="container">
-    <a class="navbar-brand" href="#">
+    <a class="navbar-brand" target="_blank" href="https://www.tvsrtechnologies.com">
       <img src="https://www.tvsrtechnologies.com/images/logo.png" alt="" width="50" height="25">
     </a>
+    <a href="logout.php" style="color:white;">logout</a>
   </div>
 </nav>
   <div class="sidenav">
